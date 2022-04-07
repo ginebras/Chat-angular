@@ -1,0 +1,47 @@
+#mensajes{
+	border: 1px dashed black;
+	width: 95%;
+	max-width: 400px;
+	height: 350px;
+	overflow-y: scroll;
+	padding: 20px;
+	box-shadow: 0px 0px 20px #ccc inset;
+}
+
+.mensajes{
+	border: 2px solid black;
+	margin-bottom: 10px;
+}
+
+#form{
+	float: left;
+	width: 150px;
+}
+
+#form form input,
+#form form textarea{
+	margin-bottom: 5px;
+	margin-top: 5px;
+	padding: 5px;
+}
+
+li{
+	list-style: none;
+}
+
+form input[disabled]{
+	opacity: 0.7;
+	cursor: not-allowed;
+}
+
+.mensajes p{
+	padding: 5px;
+	margin-top: 1px;
+	margin-bottom: 5px;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+.mensajes div{
+	padding:  5px;
+}

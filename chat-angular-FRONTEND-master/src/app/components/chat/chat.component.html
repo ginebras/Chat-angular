@@ -1,0 +1,19 @@
+<h1> Chat para compas</h1>
+<div id="mensajes">
+	<li class="mensajes" *ngFor="let i of usuarios">
+		<p class="name">{{i.usuario}}</p>
+		<div class="msg">{{i.mensajes}}</div>
+	</li>
+</div>
+
+<div id="form">
+	<form #formUsuario="ngForm" (ngSubmit)="handleMensajes()">
+		<input type="text" #nombre="ngModel" name="nombre"placeholder="Nombre de Usuario" [(ngModel)]="usuario.usuario" required [disabled]="nombreOk"/>
+		<span *ngIf="nombre.touched && !nombre.valid && !nombreOk">El nombre de usuario es requerido</span>
+		
+		<textarea name="mensaje" placeholder="Mensaje..." [(ngModel)]="usuario.mensajes"></textarea>
+		<input name="submit" type="submit" value="Enviar" [disabled]="!formUsuario.form.valid"/>
+	</form>
+</div>
+
+
